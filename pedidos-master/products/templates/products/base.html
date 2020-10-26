@@ -1,0 +1,372 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000" />
+    <link rel="icon" type="image/png" href="../../static/products/images/logoblanco.png" sizes="64x64">
+    <title>Helpmi</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179397850-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-179397850-1');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  \{if(f.fbq)return;n=f.fbq=function()\{n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)\};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)\}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '404536394291736');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=404536394291736&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<!--       <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="{% static 'products/bootstrap-3.3.7/css/bootstrap-theme.min.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'products/products.css' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
+    <script src="{% static 'products/js/vgcode.js' %}"></script>
+    <script src="{% static 'products/js/main.js' %}"></script>
+    <script src="{% static 'products/bootstrap-3.3.7/js/bootstrap.min.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOmdwL1LUyF3uBW6rpw81iW32y1FYSf4Y&callback=myMap"></script>
+     -->
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- table -->
+
+
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'products/products.css' %}">
+    <link rel="stylesheet" href=" {% static 'vendor/datatables/estilos.css' %}">
+    <!-- ICONOS -->
+    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+
+<link rel="stylesheet" href=" {% static 'vendor/dataTables/Neumorphism.css' %}">
+<link rel="stylesheet" href=" {% static 'css/bulma.min.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+   
+<!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+
+ <body oncontextmenu="return false;">
+  <div class="banner">
+  </div>
+        <nav class="navbar  navbar-dark bg-dark ">
+            <div class="container">
+              <a class="navbar-brand" href="#inicio"><img class="sizelogo" src="../../static/products/images/logoblanco.png" alt="imagenlogo"></a>
+               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Paso2">Realiza tu pedido</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>   
+
+<header>
+  <br><br><br><br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+      <img class="img-fluid rounded" src="../../static/products/images/face.jpg" alt="">
+      </div>
+      <div class="col-md-7 text-center">
+        <br>
+        <img class="sizelogo" src="../../static/products/images/HelpMiLogo2.jpg" alt="imagenlogo">
+        <br><br>
+        <!-- <p>Los pedidos recibidos de 9 a 7 hrs se entregarán al siguiente  día, excepto domingos.</p>
+        <p>Si requiere un servicio express deberá solicitarlo el mismo día antes de la 1:00 pm </p> -->
+        <p><strong>BIENVENIDOS AL SERVICIO DE PEDIDOS HELPMI </strong></p>
+        <p>Nota importante: para un óptimo funcionamiento se sugiere utilizar Google Chrome como navegador. <p>
+        <p> <strong>I N S T R U C T I V O</strong></p>
+        <p align="justify">A) Para adquirir menos de 1 kilo de cualquiera de nuestros productos, en la Columna CANTIDAD escribir por ejemplo .5 para 500 grs., .25 para 250 grs., etc.</p>  
+        <p align="justify">B) Si necesitas alguno de los productos con características específicas, deberás ingresarlo en la sección del formulario llamada ESPECIFICACIONES DE TUS PRODUCTOS localizada al finalizar el paso 2</p>
+        <p align="justify">C) Si deseas solicitar Abarrotes o no encuentras algún producto en nuestras listas de precios, en la parte final del paso dos podrás anotar lo que requieres y con gusto se cotizará.</p>
+        <p>Cualquier duda o problema respecto al manejo del Sistema, comunicarse directamente al Centro de Atención a Clientes por WhatsAPP o vía telefónica al <a class="black" href="https://api.whatsapp.com/send?phone=5217228820371&text=%C2%A1Hola!,%20%C2%BFEn%20qu%C3%A9%20podemos%20ayudarte?">7228820371<a></p>
+        <br>
+        <p><strong>VISITA NUESTRA PÁGINA DE INTERNET</strong></p>
+        <a class="black" href="https://helpmi.com.mx/">www.HelpMi.com.mx</a>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="#Paso2">REALIZA TU PEDIDO</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!--     <header id="inicio">
+      <br><br><br><br>
+        <div class="row align-items-center">
+          <div class="col-md-5">
+            <img class="img-fluid rounded mb-4 mb-lg-0" src="../../static/products/images/face.jpg" alt="">
+          </div>
+          <div class="col-md-6 center text-center">
+            <img class="sizelogo" src="../../static/products/images/HelpMiLogo2.jpg" alt="imagenlogo">
+            <br>
+            <p>Los pedidos recibidos de 9 a 7 hrs se entregarán al siguiente  día, excepto domingos.</p>
+            <p>Si requiere un servicio express deberá solicitarlo el mismo día antes de la 1:00 pm </p>
+            <br>
+            <p>VISITA NUESTRA PÁGINA DE INTERNET</p>
+            <P>www.HelpMi.com.mx</P>
+            <a class="btn btn-primary" href="#productos">REALIZA TU PEDIDO</a>
+          </div>
+        </div>
+    </header> -->
+
+    <section id="descripcion">
+     <div class="bg-secondary card text-black my-5 py-4 text-center">
+          <div class="card-body">
+            <p class="text-black m-0">REALIZA TU PEDIDO EN TRES SIMPLES PASOS:</p>
+
+          </div>
+        </div>
+    </section>
+
+    <section id="lista"> 
+        <div class="bg-pasouno card text-card text-center">
+          <div class="card-body">
+            <p class="text-card m-0">PASO 1: CONOCE NUESTRAS CATEGORÍAS DE PRODUCTOS</p>
+
+          </div>
+        </div>
+        <div class="container">
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-sm-12 col-md-2"> 
+              <div class="card">
+                <img class="card-img-top cropped2" src="../../static/products/images/fruta_conoce.jpg" alt="Card image cap">
+              <div class="card-body-products">
+                <p class="card-text">FRUTAS</p>
+              </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2 "> 
+              <div class="card">
+                <img class="card-img-top cropped2" src="../../static/products/images/verdura_conoce.jpg" alt="Card image cap">   
+              <div class="card-body-products">
+                <p class="card-text">VERDURAS</p>
+              </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2"> 
+              <div class="card">
+               <img class="card-img-top cropped2" src="../../static/products/images/carnaco_conoce.jpg" alt="Card image cap">   
+              <div class="card-body-products">
+              <p class="card-text">CARNES ROJAS</p>
+              </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2"> 
+              <div class="card">
+                <img class="card-img-top cropped2" src="../../static/products/images/pescado_conoce.jpg" alt="Card image cap">   
+              <div class="card-body-products">
+                <p class="card-text">MARISCOS</p>
+              </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2"> 
+              <div class="card">
+                <img class="card-img-top cropped2" src="../../static/products/images/pollo_conoce.jpg" alt="Card image cap">   
+              <div class="card-body-products">
+                <p class="card-text">CARNES BLANCAS</p>
+              </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2"> 
+              <div class="card">
+                <img class="card-img-top cropped2" src="../../static/products/images/huevo_conoce.jpg" alt="Card image cap">   
+              <div class="card-body-products">
+                <p class="card-text">LÁCTEOS Y EMBUTIDOS</p>
+              </div>
+              </div>
+            </div>
+          </div><!-- /.row -->
+          <br>
+          <br>
+      </div>
+    </section>
+
+<form id="frm" >
+    {% csrf_token %}
+    <section id="Paso2"  >
+      <div class="starter-template">
+        <div class="bg-pasodos card text-card text-center">
+          <div class="card-body">
+          <p class="text-card m-0">PASO 2: REALIZA TU PEDIDO</p>
+          </div>
+        </div>
+      <br>
+      <div class="container">
+      <p> En la siguiente tabla indica la cantidad de producto que deseas adquirir: </p>
+
+       {% block content %}{% endblock content %}
+       <br>
+       <div class="form-group">
+         <label for="commit">Especificaciones de tus productos:</label>
+         <textarea  type="text" class="form-control" name="commit" rows="3"></textarea>
+       </div> 
+      <div class="form-group">
+         <label for="message">Si no encontraste lo que buscabas en nuestra lista de precios, favor de anotarlo aquí y con gusto te lo cotizamos: </label>
+         <textarea  type="text" class="form-control" name="message" rows="3"></textarea>
+       </div>
+     </div>
+    </div>
+
+    <section id="contacto">
+      <div class="starter-template">
+        <div class="bg-pasotres card text-card text-center">
+          <div class="card-body">
+          <p class="text-card m-0">PASO 3: AGENDA TU PEDIDO</p>
+          </div>
+      </div>
+      <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8 contact-img">
+            <br>
+            <br>
+            <p> Ingresa los datos de entrega del pedido y la persona que lo recibirá </p>
+                <div class="hideOnSubmit">
+                  <div class="form-group">
+                    <div id="order"></div>
+                    <br>
+                    Total a pagar: <br>$<span id="total-invoice">0</span>
+              </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Forma de pago</label>
+                    <select required name="payment" class="form-control" id="exampleFormControlSelect1">
+                      <option value="Efectivo">Efectivo</option>
+                      <option value="Tarjeta">Tarjeta</option>
+                      <option value="Transferencia">Transferencia</option>
+                      <option value="Paypal">Paypal</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Nombre: *</label>
+                      <input required type="text" class="form-control" name="name">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email: *</label>
+                      <input required type="email" class="form-control" name="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="direccion">Dirección de entrega: *</label>
+                      <input required type="adress" class="form-control" name="adress">
+                    </div> <!-- duda -->
+                    <div class=" justify-content-start mt-2 center">
+                      <p align="justify"><thin>Los pedidos recibidos de 9:00 am a 7:00 pm se entregarán al siguiente día, excepto domingos.</thin><br><br>
+                      <strong>EL MONTO TOTAL A PAGAR PUEDE SUFRIR MODIFICACIONES POR VARIACIONES EN EL PESO REAL DE LOS PRODUCTOS, UNA VEZ QUE PREPAREMOS SU PEDIDO O POR GASTOS DE ENVÍO EN SU CASO.</strong>
+                      </p>
+                    </div>
+                    <div class="d-flex justify-content-start mt-2 center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </div>
+                  <div class="error-message mt-5 mb-5 paragraph  alert-danger">
+                    <p></p>
+                  </div>
+                </div>
+</form>
+            </div>
+            <div class="col-md-2">
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+<footer class="bg-dark">
+  <div class="row text-center">
+    <div class="col-md-3">      
+      <i class="fi-cnluxl-whatsapp fi-1x"></i>
+      <a class="a-footer" href="https://api.whatsapp.com/send?phone=5217228820371&text=%C2%A1Hola!,%20%C2%BFEn%20qu%C3%A9%20podemos%20ayudarte?"> 72 28 820 371</a>
+    </div>
+    <div class="col-md-3">
+      <i class="fi-cnluxl-globe-solid fi-1x"></i>
+      <a class="a-footer" href="https://helpmi.com.mx/"> www.HelpMi.com.mx</a>
+    </div>
+    <div class="col-md-3">
+      <i class="fi-snsuxl-facebook fi-1x"></i>
+      <a class="a-footer" href="https://www.facebook.com/HelpMiMexico/"> HelpMi</a>
+    </div>
+    <div class="col-md-3">
+      <i class="fi-snsuxl-instagram fi-1x"></i>
+      <a class="a-footer" href="https://www.instagram.com/HelpMiMexico/"> @helpmimexico</a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- Page DataTable  -->
+
+    <script src="{% static 'products/myfunctions.js' %}"></script>
+    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'vendor/datatables/table.min.js' %}"></script>
+
+<!-- Hotjar Tracking Code for http://helpmi.herokuapp.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1944749,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+    
+</body>
+
+</html>

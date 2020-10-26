@@ -1,0 +1,22 @@
+{
+  "name": "Product by Mondo - Data to Bsn",
+  "description": "App for easy orders ",
+  "image": "heroku/python",
+  "repository": "the repo",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for the Django application.",
+      "generator": "secret"
+    }
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python manage.py collectstatic --noinput",
+        "test": "python manage.py test"
+      }
+    }
+  }
+}

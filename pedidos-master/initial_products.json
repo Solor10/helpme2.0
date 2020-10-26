@@ -1,0 +1,28 @@
+[
+  {
+    "model": "products.Product",
+    "pk": 1,
+    "fields": {
+      "user": 5,
+      "name": "Brocoli",
+      "quantity": 1,
+      "price": 50,
+      "unit": "KG",
+      "product_type": "Fruta",
+      "is_active": true
+    }
+  },
+    {
+    "model": "products.Product",
+    "pk": 2,
+    "fields": {
+      "user": 5,
+      "name": "Brocoli",
+      "quantity": 1,
+      "price": 50,
+      "unit": "KG",
+      "product_type": "Fruta",
+      "is_active": true
+    }
+  }
+]

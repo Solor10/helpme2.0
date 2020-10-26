@@ -1,0 +1,93 @@
+{% extends "products/base.html" %}
+{% block content %}
+<script>
+    
+
+// $(document).ready(function() {
+//     $('#dataTable').DataTable( {
+//         "language": {
+//             "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+//         }
+//     } );
+// } );
+$(document).ready(function() {
+    $('#table').DataTable( {
+        "language": {
+                    "sProcessing":     "Procesando...",
+                    "sLengthMenu":     "Mostrar _MENU_ registros",
+                    "sZeroRecords":    "No se encontraron resultados",
+                    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+                    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "sInfoFiltered":   "",
+                    "sInfoPostFix":    "",
+                    "sSearch":         "Buscar:",
+                    "sUrl":            "",
+                    "sInfoThousands":  ",",
+                    "sLoadingRecords": "Cargando...",
+                    "oPaginate": {
+                      "sFirst":    "Primero",
+                      "sLast":     "Último",
+                      "sNext":     "Siguiente",
+                      "sPrevious": "Anterior"
+                    },
+                    "oAria": {
+                      "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                      "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                    }
+                  }
+    } );
+} );
+
+
+
+</script>
+
+    <div class="card-header">
+        <p class="m-0 font-weight-bold white">Productos</p>
+    </div>
+    <br>
+   
+            <table class="table table-responsive-md table-bordered table-hover table-sm" id="table" width="100%" cellspacing="0">
+            <thead>
+            <tr>
+                <th>Categoria</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Unidad</th>
+                <th>Subtotal</th>
+<!--                 <th>Comentario</th>
+ -->            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+                <th>Categoría</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Unidad</th>
+                <th>Subtotal</th>
+<!--                 <th>Comentario</th>        
+ -->            </tr>
+          </tfoot>
+          <tbody>
+            {% for p in prod %}
+              <tr id="product_describe" class="tr is-offset-4">
+                <td id="type_product" data-label="Categoria">{{ p.product_type }}</td>
+                <td id="name_product" data-label="Producto">{{ p.name }}</td>
+                <td data-label="Precio"><input disabled type="number" class=" parainput auto-calc unit-price" value="{{ p.price }}"></td>
+                <td data-label="Cantidad"><input  class=" parainput auto-calc amount "></td>
+                <td id="unit_product" data-label="Unidad">{{ p.unit }}</td>
+                <td data-label="Subtotal"><input  disabled type="text" class=" parainput total-cost " pattern="^\d*(\.\d{0,2})?$"></td>
+<!--       <td><input type="text" class="form-control" id="commit" ></td>
+      -->    </tr>
+           {% endfor %}
+          </tbody>
+  
+         
+        </table>
+    
+
+
+{% endblock %} 
