@@ -15,4 +15,8 @@ class ProductsAdmin(admin.ModelAdmin):
 
 @admin.register(models.Order)
 class OrderAdmin(admin.ModelAdmin):
+    list_display = ("phone", "payment", "name", "email", "adress", "message", "order", "total")
+    search_fields = ["name"]
+
+    
     pass
